@@ -9,7 +9,7 @@ export function AboutSection() {
         <RevealOnScroll className="about-grid__visual">
           <div className="about-portrait about-portrait--soft">
             <img
-              src="/images/ref/about-portrait.jpg"
+              src="/mockup/about-portrait.jpg"
               alt="Vethathiri Maharishi"
               width={834}
               height={744}

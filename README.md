@@ -1,15 +1,8 @@
-# Vethathiri Maharishi Spiritual Village
+# Vethathiri Maharishi Spiritual Village — React Site
 
-Production-quality React + Vite website recreating the Spiritual Based Life Living reference layout.
+Full **React + Vite + TypeScript** landing page (coded components, not a flat image).
 
-## Stack
-
-- React 19 + TypeScript + Vite 8
-- Framer Motion (scroll reveal, hero entrance, card hover)
-- Lucide React icons
-- CSS design system (`src/index.css`) aligned to the reference palette
-
-## Run locally
+## Run
 
 ```bash
 npm install
@@ -18,20 +11,21 @@ npm run dev
 
 Open http://localhost:5173
 
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
 ## Structure
 
-- `src/components/sections/` — page sections (Hero, About, Practices, …)
-- `src/components/cards/` — Practice and Dimension cards
-- `src/context/EnquireContext.tsx` — enquiry modal (validated form → mailto)
-- `src/data/content.ts` — section content arrays
+| Path | Role |
+|------|------|
+| `src/App.tsx` | Page shell, nav, all sections |
+| `src/components/sections/` | Hero, About, Practices, Dimensions, … |
+| `src/components/cards/` | Practice & dimension cards |
+| `src/data/content.ts` | Copy and image paths |
+| `src/index.css` | Design system (cream / forest / orange) |
+| `public/mockup/` | Reference artwork crops for hero & portrait |
 
-## Enquiries
+## Stack
 
-CTAs open a validated enquiry form. On submit, the user's email client opens with a pre-filled message to `enquire@spiritualvillage.org` (no backend required).
+React 19, Framer Motion, Lucide React, enquiry modal (`mailto`).
+
+## Optional mockup-only view
+
+`src/components/MockupExactPage.tsx` stacks the raw design JPEG (pixel-perfect static). The default app uses **React sections** instead.

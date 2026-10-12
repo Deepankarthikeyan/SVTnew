@@ -16,7 +16,7 @@ export function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="hero__eyebrow">Spiritual Based</p>
+          <p className="hero__eyebrow">A Spiritual Based</p>
           <h1>Life Living</h1>
           <p className="hero__lead">
             A journey from physical well-being to inner transformation.
@@ -48,7 +48,7 @@ export function HeroSection() {
           transition={{ delay: 0.15, duration: 0.85 }}
         >
           <img
-            src="/images/ref/hero-scene.jpg"
+            src="/mockup/hero-scene-ref.jpg"
             alt="Meditation overlooking a peaceful valley at sunrise"
             width={1134}
             height={846}
