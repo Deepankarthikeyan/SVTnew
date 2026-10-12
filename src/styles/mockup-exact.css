@@ -181,41 +181,95 @@ body {
   font-size: 1rem;
 }
 
-/* —— Dimensions —— */
+/* —— Brand logo —— */
+.brand-logo {
+  height: auto;
+  display: block;
+  max-width: min(240px, 50vw);
+}
+
+.brand-logo--footer {
+  max-width: min(300px, 82vw);
+}
+
+.nav__logo-full {
+  max-width: min(230px, 46vw);
+}
+
+.hero__tagline-logo {
+  max-height: 26px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* —— Dimensions (mockup — no duplicate card background) —— */
 .section--dimensions {
   position: relative;
-  background: var(--bg-main) url('/images/exact/dimensions-bg.jpg') center / cover no-repeat;
-  padding-bottom: clamp(3rem, 6vw, 5rem);
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--bg-main);
+  padding-bottom: clamp(3.5rem, 6vw, 5rem);
 }
 
-.section--dimensions::before {
-  content: '';
+.dimensions-scenery {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0.75));
+  top: 0;
+  left: 0;
+  right: 0;
+  height: min(220px, 36vw);
+  background: url('/images/exact/dimensions-scenery.jpg') center top / cover no-repeat;
+  opacity: 0.5;
   pointer-events: none;
+  z-index: 0;
 }
 
-.section--dimensions .container,
-.section--dimensions .dimensions-row {
+.dimensions-head {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+.dimensions-row-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.dimensions-row {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.dimensions-row__item {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+}
+
+.dimensions-row__item .dimension-card {
+  flex: 1;
+  width: 100%;
 }
 
 .dimension-card {
-  min-height: 420px;
-  border-radius: 12px;
+  min-height: 400px;
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(26, 46, 42, 0.16);
 }
 
 .dimension-card__content {
-  min-height: 420px;
+  min-height: 0;
+  padding: 1.65rem 0.65rem 5.75rem;
   justify-content: flex-start;
-  padding-top: 2rem;
 }
 
 .dimension-card__content h3 {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.28rem;
+  letter-spacing: 0.12em;
+}
+
+.dimension-card__content p {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
 }
 
 /* —— Lifestyle —— */
@@ -383,7 +437,14 @@ body {
 
 /* —— Final CTA —— */
 .section--final-cta {
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(4rem, 8vw, 6rem) 0 clamp(3rem, 6vw, 4.5rem);
+}
+
+.site-footer {
+  position: relative;
+  z-index: 5;
 }
 
 .final-cta__overlay {

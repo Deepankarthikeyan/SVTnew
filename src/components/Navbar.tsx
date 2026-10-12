@@ -2,6 +2,7 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from 'react'
 import { useEnquire } from '../context/EnquireContext'
 import { navLinks, type NavLink } from '../data/content'
+import { BrandLogo } from './BrandLogo'
 
 type NavbarProps = {
   activeSection: string
@@ -28,11 +29,7 @@ export function Navbar({ activeSection, links = navLinks, transparentOnTop = fal
     >
       <div className="container nav__inner">
         <a className="nav__brand" href="#home">
-          <img src="/mockup/logo-crop.png" alt="" className="nav__emblem" width={44} height={44} />
-          <span className="nav__brand-text">
-            <strong>Vethathiri Maharishi</strong>
-            <small>Spiritual Village</small>
-          </span>
+          <BrandLogo className="nav__logo-full" />
         </a>
 
         <button

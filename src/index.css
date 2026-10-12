@@ -646,6 +646,7 @@ button {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.65rem;
   padding: 0 clamp(0.75rem, 2vw, 1.5rem);
+  align-items: stretch;
 }
 
 .dimension-card {
@@ -677,12 +678,12 @@ button {
 
 .dimension-card__content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.75rem 1rem 1.5rem;
-  min-height: 390px;
+  padding: 1.75rem 1rem 5.5rem;
+  min-height: 0;
 }
 
 .dimension-card__glow {

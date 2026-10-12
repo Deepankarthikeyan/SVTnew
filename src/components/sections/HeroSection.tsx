@@ -48,7 +48,7 @@ export function HeroSection() {
 
       <div className="hero__ribbon">
         <div className="container hero__tagline">
-          <img src="/mockup/logo-crop.png" alt="" width={26} height={26} className="hero__tagline-logo" />
+          <img src="/images/brand-logo.png" alt="" width={120} height={32} className="hero__tagline-logo" />
           <span>Know Yourself</span>
           <span className="hero__tagline-dot" aria-hidden="true">·</span>
           <span>Understand Life</span>
