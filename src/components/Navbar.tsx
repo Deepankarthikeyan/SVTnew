@@ -1,13 +1,15 @@
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from 'react'
 import { useEnquire } from '../context/EnquireContext'
-import { navLinks } from '../data/content'
+import { navLinks, type NavLink } from '../data/content'
 
 type NavbarProps = {
   activeSection: string
+  links?: NavLink[]
+  transparentOnTop?: boolean
 }
 
-export function Navbar({ activeSection }: NavbarProps) {
+export function Navbar({ activeSection, links = navLinks, transparentOnTop = false }: NavbarProps) {
   const { openEnquire } = useEnquire()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -19,7 +21,7 @@ export function Navbar({ activeSection }: NavbarProps) {
 
   return (
     <motion.header
-      className={`nav${scrolled ? ' nav--scrolled' : ''}`}
+      className={`nav${scrolled ? ' nav--scrolled' : ''}${transparentOnTop && !scrolled && activeSection === 'home' ? ' nav--hero' : ''}`}
       initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -45,9 +47,9 @@ export function Navbar({ activeSection }: NavbarProps) {
         </button>
 
         <nav className={`nav__links${open ? ' nav__links--open' : ''}`} aria-label="Primary">
-          {navLinks.map((link) => (
+          {links.map((link) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
               className={activeSection === link.sectionId ? 'is-active' : undefined}
               onClick={() => setOpen(false)}

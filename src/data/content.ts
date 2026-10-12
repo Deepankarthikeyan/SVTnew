@@ -1,3 +1,5 @@
+export type NavLink = { label: string; href: string; sectionId: string }
+
 export const sectionIds = [
   'home',
   'about',
@@ -11,6 +13,18 @@ export const sectionIds = [
   'balance',
   'contact',
 ] as const
+
+/** Five-section landing (coded React — no merged PNG slices). */
+export const landingSectionIds = ['home', 'about', 'journey', 'dimensions', 'lifestyle'] as const
+
+export const landingNavLinks = [
+  { label: 'Home', href: '#home', sectionId: 'home' },
+  { label: 'About', href: '#about', sectionId: 'about' },
+  { label: 'Practices', href: '#journey', sectionId: 'journey' },
+  { label: 'Dimensions', href: '#dimensions', sectionId: 'dimensions' },
+  { label: 'Life at Village', href: '#lifestyle', sectionId: 'lifestyle' },
+  { label: 'Contact', href: '#lifestyle', sectionId: 'lifestyle' },
+]
 
 export const navLinks = [
   { label: 'Home', href: '#home', sectionId: 'home' },
@@ -64,43 +78,48 @@ export const dimensions = [
   {
     key: 'BODY',
     subtitle: 'Healthy physical living',
-    gradient: 'linear-gradient(180deg, #1a5c42 0%, #2d7a58 100%)',
+    gradient: 'linear-gradient(180deg, rgba(26, 92, 66, 0.94) 0%, rgba(45, 122, 88, 0.55) 48%, transparent 72%)',
     icon: 'body',
+    image: '/images/practice-exercise.jpg',
   },
   {
     key: 'MIND',
     subtitle: 'Clarity and emotional balance',
-    gradient: 'linear-gradient(180deg, #1a4a7a 0%, #3d7ec8 100%)',
+    gradient: 'linear-gradient(180deg, rgba(26, 74, 122, 0.94) 0%, rgba(61, 126, 200, 0.5) 48%, transparent 72%)',
     icon: 'mind',
+    image: '/images/ref/practice-3.jpg',
   },
   {
     key: 'LIFE FORCE',
     subtitle: 'Awareness of the energy within',
-    gradient: 'linear-gradient(180deg, #c45f12 0%, #f0b429 100%)',
+    gradient: 'linear-gradient(180deg, rgba(196, 95, 18, 0.92) 0%, rgba(240, 180, 41, 0.5) 48%, transparent 72%)',
     icon: 'force',
+    image: '/images/hq/hero-scene-alt.jpg',
   },
   {
     key: 'CONSCIOUSNESS',
     subtitle: 'Understanding oneself and life',
-    gradient: 'linear-gradient(180deg, #5a2d8a 0%, #8b5cf6 100%)',
+    gradient: 'linear-gradient(180deg, rgba(90, 45, 138, 0.92) 0%, rgba(139, 92, 246, 0.48) 48%, transparent 72%)',
     icon: 'consciousness',
+    image: '/images/practice-introspection.jpg',
   },
   {
     key: 'HARMONY',
     subtitle: 'Living peacefully with society and nature',
-    gradient: 'linear-gradient(180deg, #7a4530 0%, #c79a52 100%)',
+    gradient: 'linear-gradient(180deg, rgba(122, 69, 48, 0.9) 0%, rgba(199, 154, 82, 0.48) 48%, transparent 72%)',
     icon: 'harmony',
+    image: '/images/ref/village-1.jpg',
   },
 ]
 
 export const wayOfLife = [
-  { label: 'Consciousness in our thoughts', icon: 'brain' },
-  { label: 'Discipline in our actions', icon: 'target' },
-  { label: 'Compassion in our relationships', icon: 'heart' },
-  { label: 'Harmony with nature', icon: 'trees' },
-  { label: 'Peace within ourselves', icon: 'sparkles' },
-  { label: 'Responsibility towards society', icon: 'handHeart' },
-  { label: 'Universal Brotherhood towards all', icon: 'users' },
+  { title: 'Consciousness', sub: 'in our thoughts', icon: 'brain' },
+  { title: 'Discipline', sub: 'in our actions', icon: 'target' },
+  { title: 'Compassion', sub: 'in our relationships', icon: 'heart' },
+  { title: 'Harmony', sub: 'with nature', icon: 'trees' },
+  { title: 'Peace', sub: 'within ourselves', icon: 'sparkles' },
+  { title: 'Responsibility', sub: 'towards society', icon: 'handHeart' },
+  { title: 'Universal Brotherhood', sub: 'towards all', icon: 'users' },
 ]
 
 export const discoveries = [

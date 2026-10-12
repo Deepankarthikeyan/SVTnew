@@ -1,10 +1,10 @@
-import { FiveSectionPage } from './components/FiveSectionPage'
+import { LandingPage } from './components/LandingPage'
 import { EnquireProvider } from './context/EnquireContext'
 
 function App() {
   return (
     <EnquireProvider>
-      <FiveSectionPage />
+      <LandingPage />
     </EnquireProvider>
   )
 }

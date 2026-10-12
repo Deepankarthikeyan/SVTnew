@@ -1,11 +1,14 @@
 import { journeyPractices } from '../../data/content'
 import { PracticeCard } from '../cards/PracticeCard'
+import { BotanicalDecor } from '../BotanicalDecor'
 import { SectionHeading } from '../SectionHeading'
 import { StaggerItem, StaggerReveal } from '../RevealOnScroll'
 
 export function PracticeSection() {
   return (
     <section id="journey" className="section section--practices">
+      <BotanicalDecor position="top-left" />
+      <BotanicalDecor position="top-right" />
       <div className="container">
         <SectionHeading
           eyebrow="The Journey Within"
