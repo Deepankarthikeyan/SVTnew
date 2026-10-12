@@ -6,7 +6,6 @@ import { BalanceSection } from './sections/BalanceSection'
 import { BrotherhoodSection } from './sections/BrotherhoodSection'
 import { DimensionsSection } from './sections/DimensionsSection'
 import { FinalCTASection } from './sections/FinalCTASection'
-import { SimpleMessageSection } from './sections/SimpleMessageSection'
 import { HeroSection } from './sections/HeroSection'
 import { JourneySection } from './sections/JourneySection'
 import { LifestyleSection } from './sections/LifestyleSection'
@@ -35,7 +34,6 @@ export function LandingPage() {
       </div>
       <VillageSection />
       <BalanceSection />
-      <SimpleMessageSection />
       <FinalCTASection />
       <Footer />
     </div>
