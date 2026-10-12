@@ -1,0 +1,94 @@
+/* Five design sections — full-width artwork from supplied PNGs (1920px) */
+
+.five-sections {
+  background: #faf9f6;
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: #e67e22;
+  color: #fff;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+.five-sections__nav {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  max-width: 12rem;
+  justify-content: flex-end;
+}
+
+.five-sections__nav a {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.55rem;
+  background: rgba(255, 253, 247, 0.92);
+  border: 1px solid rgba(23, 63, 53, 0.12);
+  border-radius: 999px;
+  color: #173b34;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.five-sections__nav a:hover {
+  border-color: #e97816;
+}
+
+.section-art {
+  width: 100%;
+  margin: 0;
+  line-height: 0;
+}
+
+.section-art__frame {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.section-art__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section-art__hotspots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.section-art__hotspot {
+  position: absolute;
+  pointer-events: auto;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.section-art__hotspot:focus-visible {
+  outline: 2px solid #e97816;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-art__frame {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
