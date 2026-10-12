@@ -206,31 +206,20 @@ body {
 .section--dimensions {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+  overflow: visible;
   background: var(--bg-main);
   padding-bottom: clamp(3.5rem, 6vw, 5rem);
 }
 
-.dimensions-scenery {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: min(220px, 36vw);
-  background: url('/images/exact/dimensions-scenery.jpg') center top / cover no-repeat;
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .dimensions-head {
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  margin-bottom: 0.25rem;
 }
 
 .dimensions-row-wrap {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .dimensions-row {

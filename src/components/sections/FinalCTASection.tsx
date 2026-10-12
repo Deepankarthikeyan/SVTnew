@@ -8,12 +8,12 @@ export function FinalCTASection() {
 
   return (
     <section id="contact" className="section section--final-cta">
-      <div className="final-cta__bg">
+      <div className="final-cta__bg" aria-hidden="true">
         <img
-          src="/images/exact/cta-hero.jpg"
+          src="/images/ref/cta-sunset.jpg"
           alt=""
-          width={1920}
-          height={469}
+          width={1743}
+          height={576}
           loading="lazy"
           decoding="async"
         />
@@ -38,10 +38,6 @@ export function FinalCTASection() {
           <button type="button" className="btn btn--primary btn--lg" onClick={openEnquire}>
             Begin Your Journey <span aria-hidden="true">→</span>
           </button>
-          <p className="final-cta__closing">
-            <strong>Spiritual Based Life Living</strong>
-            <span>A journey towards knowing yourself and understanding life.</span>
-          </p>
         </RevealOnScroll>
       </div>
     </section>

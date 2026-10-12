@@ -3,10 +3,10 @@ import { DimensionCard } from '../cards/DimensionCard'
 import { SectionHeading } from '../SectionHeading'
 import { StaggerItem, StaggerReveal } from '../RevealOnScroll'
 
+/** Five dimension pillars — single React layer (no mockup slice backgrounds). */
 export function DimensionsSection() {
   return (
     <section id="dimensions" className="section section--dimensions">
-      <div className="dimensions-scenery" aria-hidden="true" />
       <div className="container dimensions-head">
         <SectionHeading
           eyebrow="Five Dimensions"
