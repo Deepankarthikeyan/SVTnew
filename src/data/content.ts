@@ -1,53 +1,72 @@
+export const sectionIds = [
+  'home',
+  'about',
+  'journey',
+  'dimensions',
+  'lifestyle',
+  'peace',
+  'purpose',
+  'brotherhood',
+  'village',
+  'balance',
+  'contact',
+] as const
+
 export const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Practices', href: '#journey' },
-  { label: 'Life at Village', href: '#village' },
-  { label: 'Benefits', href: '#discover' },
-  { label: 'Purpose', href: '#purpose' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#home', sectionId: 'home' },
+  { label: 'About', href: '#about', sectionId: 'about' },
+  { label: 'Practices', href: '#journey', sectionId: 'journey' },
+  { label: 'Life at Village', href: '#village', sectionId: 'village' },
+  { label: 'Benefits', href: '#peace', sectionId: 'peace' },
+  { label: 'Purpose', href: '#purpose', sectionId: 'purpose' },
+  { label: 'Contact', href: '#contact', sectionId: 'contact' },
 ]
 
 export const journeyPractices = [
   {
-    icon: '🧘',
+    icon: 'activity',
     title: 'Simplified Physical Exercises',
     description:
       'Improve physical health, flexibility and overall well-being through simple and practical exercises.',
-    image:
-      'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=75',
+    image: '/images/practice-exercise.jpg',
+    imageFallback:
+      'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=640&q=75',
   },
   {
-    icon: '🪷',
+    icon: 'flower2',
     title: 'Meditation',
     description:
       'Develop a calm and focused mind through regular meditation and inner observation.',
-    image:
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=75',
+    image: '/images/practice-meditation.jpg',
+    imageFallback:
+      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=640&q=75',
   },
   {
-    icon: '🔍',
+    icon: 'search',
     title: 'Introspection',
     description:
       'Understand your thoughts, emotions and actions through self-awareness and reflection.',
-    image:
-      'https://images.unsplash.com/photo-1499203537755-b9c5aefc5b12?auto=format&fit=crop&w=600&q=75',
+    image: '/images/practice-introspection.jpg',
+    imageFallback:
+      'https://images.unsplash.com/photo-1499203537755-b9c5aefc5b12?auto=format&fit=crop&w=640&q=75',
   },
   {
-    icon: '🌿',
+    icon: 'leaf',
     title: 'Kayakalpa',
     description:
       'A traditional practice focused on developing awareness of the body, mind and life force.',
-    image:
-      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=75',
+    image: '/images/practice-kayakalpa.jpg',
+    imageFallback:
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=640&q=75',
   },
   {
-    icon: '📖',
+    icon: 'bookOpen',
     title: 'Wisdom of Vethathiri Maharishi',
     description:
       'Explore profound teachings that help understand human life, relationships, nature and universal consciousness.',
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=75',
+    image: '/images/practice-wisdom.jpg',
+    imageFallback:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=640&q=75',
   },
 ]
 
@@ -55,81 +74,97 @@ export const dimensions = [
   {
     key: 'BODY',
     subtitle: 'Healthy physical living',
-    gradient: 'linear-gradient(165deg, #1f4d3a 0%, #2d6a4f 45%, #40916c 100%)',
+    tone: 'green',
+    gradient: 'linear-gradient(180deg, #1f5c45 0%, #2f7a5c 55%, #3d9970 100%)',
     icon: 'body',
   },
   {
     key: 'MIND',
     subtitle: 'Clarity and emotional balance',
-    gradient: 'linear-gradient(165deg, #1e3a5f 0%, #2563eb 50%, #60a5fa 100%)',
+    tone: 'blue',
+    gradient: 'linear-gradient(180deg, #1d4f8c 0%, #2f6eb8 55%, #5b9bd5 100%)',
     icon: 'mind',
   },
   {
     key: 'LIFE FORCE',
     subtitle: 'Awareness of the energy within',
-    gradient: 'linear-gradient(165deg, #9a3412 0%, #ea580c 55%, #fbbf24 100%)',
+    tone: 'gold',
+    gradient: 'linear-gradient(180deg, #b45309 0%, #e97816 50%, #f0b429 100%)',
     icon: 'force',
   },
   {
     key: 'CONSCIOUSNESS',
     subtitle: 'Understanding oneself and life',
-    gradient: 'linear-gradient(165deg, #4c1d95 0%, #7c3aed 55%, #a78bfa 100%)',
+    tone: 'purple',
+    gradient: 'linear-gradient(180deg, #5b2d8b 0%, #7c4fbb 55%, #9b7ad0 100%)',
     icon: 'consciousness',
   },
   {
     key: 'HARMONY',
     subtitle: 'Living peacefully with society and nature',
-    gradient: 'linear-gradient(165deg, #3f2e1f 0%, #6b4f2a 50%, #a67c52 100%)',
+    tone: 'terra',
+    gradient: 'linear-gradient(180deg, #7a4a32 0%, #a06445 55%, #c79a52 100%)',
     icon: 'harmony',
   },
 ]
 
 export const wayOfLife = [
-  'Consciousness in our thoughts',
-  'Discipline in our actions',
-  'Compassion in our relationships',
-  'Harmony with nature',
-  'Peace within ourselves',
-  'Responsibility towards society',
-  'Universal Brotherhood towards all',
+  { label: 'Consciousness in our thoughts', icon: 'brain' },
+  { label: 'Discipline in our actions', icon: 'target' },
+  { label: 'Compassion in our relationships', icon: 'heart' },
+  { label: 'Harmony with nature', icon: 'trees' },
+  { label: 'Peace within ourselves', icon: 'sparkles' },
+  { label: 'Responsibility towards society', icon: 'handHeart' },
+  { label: 'Universal Brotherhood towards all', icon: 'users' },
 ]
 
 export const discoveries = [
-  { num: '01', title: 'Mental Clarity', text: 'A calmer and more focused mind.', icon: 'clarity' },
-  { num: '02', title: 'Emotional Balance', text: 'Greater understanding and control of emotions.', icon: 'balance' },
-  { num: '03', title: 'Self-Awareness', text: 'A deeper understanding of oneself.', icon: 'awareness' },
-  { num: '04', title: 'Inner Peace', text: 'A peaceful state beyond everyday distractions.', icon: 'peace' },
-  { num: '05', title: 'Harmony', text: 'A balanced relationship with people, society and nature.', icon: 'harmony' },
-  { num: '06', title: 'Wisdom', text: 'A deeper understanding of life and its purpose.', icon: 'wisdom' },
+  { num: '01', title: 'Mental Clarity', text: 'A calmer and more focused mind.', icon: 'brain' },
+  { num: '02', title: 'Emotional Balance', text: 'Greater understanding and control of emotions.', icon: 'scale' },
+  { num: '03', title: 'Self-Awareness', text: 'A deeper understanding of oneself.', icon: 'eye' },
+  { num: '04', title: 'Inner Peace', text: 'A peaceful state beyond everyday distractions.', icon: 'feather' },
+  { num: '05', title: 'Harmony', text: 'A balanced relationship with people, society and nature.', icon: 'leaf' },
+  { num: '06', title: 'Wisdom', text: 'A deeper understanding of life and its purpose.', icon: 'bookOpen' },
 ]
 
 export const ctaPillars = [
-  { label: 'Live consciously.', icon: 'conscious' },
-  { label: 'Live compassionately.', icon: 'compassion' },
-  { label: 'Live harmoniously.', icon: 'harmony' },
-  { label: 'Live with awareness.', icon: 'awareness' },
+  { label: 'Live consciously.', icon: 'sun' },
+  { label: 'Live compassionately.', icon: 'heart' },
+  { label: 'Live harmoniously.', icon: 'leaf' },
+  { label: 'Live with awareness.', icon: 'eye' },
+  { label: 'Live responsibly.', icon: 'handHeart' },
 ]
 
 export const purposeItems = [
   {
     title: 'Know Yourself',
     text: 'Understand your thoughts, emotions, body and inner nature.',
+    icon: 'user',
   },
   {
     title: 'Understand Life',
     text: 'Explore the purpose and deeper meaning of human life.',
+    icon: 'compass',
   },
   {
     title: 'Live in Harmony',
     text: 'Build harmonious relationships with people and nature.',
+    icon: 'leaf',
   },
   {
     title: 'Experience Inner Peace',
     text: 'Discover the peace and wisdom that already exist within.',
+    icon: 'feather',
   },
 ]
 
-export const brotherhoodValues = ['Love', 'Compassion', 'Understanding', 'Harmony', 'Responsibility']
+export const brotherhoodValues = [
+  { label: 'Love', icon: 'heart' },
+  { label: 'Compassion', icon: 'handHeart' },
+  { label: 'Understanding', icon: 'messageCircle' },
+  { label: 'Harmony', icon: 'leaf' },
+  { label: 'Responsibility', icon: 'shield' },
+]
 
 export const villageTiles = [
   {
@@ -158,26 +193,26 @@ export const villageTiles = [
   },
 ]
 
-export const comparison = {
-  physical: {
+export const comparison = [
+  {
     title: 'Physical',
-    color: '#1f4d3a',
+    color: '#173F35',
     image:
-      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=75',
+      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=700&q=75',
     items: ['Healthy body', 'Exercise', 'Vitality', 'Discipline'],
   },
-  mental: {
+  {
     title: 'Mental',
-    color: '#1e40af',
+    color: '#1d4f8c',
     image:
-      'https://images.unsplash.com/photo-1499203537755-b9c5aefc5b12?auto=format&fit=crop&w=600&q=75',
+      'https://images.unsplash.com/photo-1499203537755-b9c5aefc5b12?auto=format&fit=crop&w=700&q=75',
     items: ['Clear mind', 'Meditation', 'Emotional balance', 'Focus'],
   },
-  spiritual: {
+  {
     title: 'Spiritual',
-    color: '#b45309',
+    color: '#E97816',
     image:
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=75',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=700&q=75',
     items: ['Inner awareness', 'Introspection', 'Self-realisation', 'Inner peace'],
   },
-}
+]
