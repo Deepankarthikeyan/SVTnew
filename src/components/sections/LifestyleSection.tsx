@@ -7,7 +7,7 @@ export function LifestyleSection() {
     <section id="lifestyle" className="section section--lifestyle">
       <div className="container lifestyle-grid">
         <RevealOnScroll>
-          <h2 className="display-title">More Than a Practice. A Way of Life.</h2>
+          <h2 className="display-title display-title--green">More Than a Practice. A Way of Life.</h2>
           <p>
             Spiritual living is not limited to meditation or yoga. It is about bringing awareness
             into everyday life.

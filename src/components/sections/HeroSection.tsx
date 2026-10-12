@@ -1,81 +1,61 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
+import { Leaf } from 'lucide-react'
 import { useEnquire } from '../../context/EnquireContext'
+import { BotanicalDecor } from '../BotanicalDecor'
 
 export function HeroSection() {
   const { openEnquire } = useEnquire()
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '12%'])
 
   return (
-    <section id="home" className="hero" ref={ref}>
-      <motion.div className="hero__bg" style={{ y: imageY }}>
-        <img
-          src="/images/hero-valley.jpg"
-          alt="Meditation overlooking misty mountains and village rooftops"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          decoding="async"
-        />
-        <div className="hero__overlay" />
-      </motion.div>
-
-      <div className="container hero__content">
-        <motion.p
-          className="hero__eyebrow"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.65 }}
-        >
-          Vethathiri Maharishi Spiritual Village
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.75 }}
-        >
-          <span>Spiritual Based</span>
-          <span>Life Living</span>
-        </motion.h1>
-        <motion.p
-          className="hero__lead"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.32, duration: 0.7 }}
-        >
-          A journey from physical well-being to inner transformation.
-        </motion.p>
-        <motion.p
-          className="hero__text"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.42, duration: 0.7 }}
-        >
-          Discover a way of life inspired by the teachings of Vethathiri Maharishi, where yoga,
-          meditation, introspection, nature and conscious living come together to nurture the body,
-          mind and life force.
-        </motion.p>
+    <section id="home" className="hero hero--reference">
+      <BotanicalDecor position="top-left" />
+      <div className="hero__split">
         <motion.div
-          className="hero__actions"
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.52, duration: 0.65 }}
+          className="hero__copy"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         >
-          <a className="btn btn--primary" href="#journey">Explore Spiritual Living</a>
-          <button type="button" className="btn btn--outline-light" onClick={openEnquire}>
-            Enquire Now
-          </button>
+          <p className="hero__eyebrow">Spiritual Based</p>
+          <h1>Life Living</h1>
+          <p className="hero__lead">
+            A journey from physical well-being to inner transformation.
+          </p>
+          <p className="hero__text">
+            Discover a way of life inspired by the teachings of Vethathiri Maharishi, where yoga,
+            meditation, introspection, nature and conscious living come together to nurture the body,
+            mind and life force.
+          </p>
+          <div className="hero__actions">
+            <a className="btn btn--primary" href="#journey">
+              Explore Spiritual Living <span aria-hidden="true">→</span>
+            </a>
+            <button type="button" className="btn btn--outline" onClick={openEnquire}>
+              Enquire Now
+            </button>
+          </div>
+          <p className="hero__tagline">
+            <Leaf size={16} strokeWidth={1.6} aria-hidden="true" />
+            Know Yourself <span aria-hidden="true">•</span> Understand Life{' '}
+            <span aria-hidden="true">•</span> Live in Harmony
+          </p>
         </motion.div>
-      </div>
 
-      <div className="hero__ribbon">
-        <span>Know Yourself</span>
-        <span aria-hidden="true">·</span>
-        <span>Understand Life</span>
-        <span aria-hidden="true">·</span>
-        <span>Live in Harmony</span>
+        <motion.div
+          className="hero__visual"
+          initial={{ opacity: 0, scale: 1.02 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.15, duration: 0.85 }}
+        >
+          <img
+            src="/images/ref/hero-scene.jpg"
+            alt="Meditation overlooking a peaceful valley at sunrise"
+            width={1134}
+            height={846}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </motion.div>
       </div>
     </section>
   )

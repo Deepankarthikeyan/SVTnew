@@ -4,23 +4,23 @@ import { RevealOnScroll } from '../RevealOnScroll'
 export function AboutSection() {
   return (
     <section id="about" className="section section--about">
-      <BotanicalDecor position="top-left" />
-      <BotanicalDecor position="bottom-right" />
+      <BotanicalDecor position="top-right" />
       <div className="container about-grid">
         <RevealOnScroll className="about-grid__visual">
-          <div className="about-portrait">
+          <div className="about-portrait about-portrait--soft">
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=720&q=80"
-              alt="Spiritual teacher portrait"
-              width={480}
-              height={480}
+              src="/images/ref/about-portrait.jpg"
+              alt="Vethathiri Maharishi"
+              width={834}
+              height={744}
               loading="lazy"
               decoding="async"
             />
           </div>
         </RevealOnScroll>
         <RevealOnScroll className="about-grid__copy" delay={0.08}>
-          <h2 className="display-title">Live Better. Think Deeper. Know Yourself.</h2>
+          <p className="kicker">About</p>
+          <h2 className="display-title display-title--green">Live Better. Think Deeper. Know Yourself.</h2>
           <p>
             Vethathiri Maharishi Spiritual Village offers a serene environment where spiritual
             practices become part of everyday life.

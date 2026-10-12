@@ -8,16 +8,17 @@ export function PurposeSection() {
       <div className="container purpose-layout">
         <RevealOnScroll className="purpose-layout__media">
           <img
-            src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=900&q=80"
+            src="/images/ref/purpose.jpg"
             alt="Person meditating at sunrise"
-            width={720}
-            height={880}
+            width={783}
+            height={480}
             loading="lazy"
             decoding="async"
           />
         </RevealOnScroll>
         <RevealOnScroll className="purpose-layout__copy" delay={0.1}>
-          <h2 className="display-title">Know Yourself. Understand Life.</h2>
+          <p className="kicker">The Purpose of the Journey</p>
+          <h2 className="display-title display-title--green">Know Yourself. Understand Life.</h2>
           <p>The ultimate purpose of this spiritual journey is to:</p>
           <ul className="purpose-points">
             {purposeItems.map((item) => (

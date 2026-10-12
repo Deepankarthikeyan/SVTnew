@@ -6,10 +6,9 @@ type PracticeCardProps = {
   title: string
   description: string
   image: string
-  imageFallback: string
 }
 
-export function PracticeCard({ icon, title, description, image, imageFallback }: PracticeCardProps) {
+export function PracticeCard({ icon, title, description, image }: PracticeCardProps) {
   return (
     <motion.article
       className="practice-card"
@@ -17,18 +16,7 @@ export function PracticeCard({ icon, title, description, image, imageFallback }:
       transition={{ type: 'spring', stiffness: 280, damping: 22 }}
     >
       <div className="practice-card__media">
-        <img
-          src={image}
-          alt=""
-          width={400}
-          height={280}
-          loading="lazy"
-          decoding="async"
-          onError={(e) => {
-            const img = e.currentTarget
-            if (img.src !== imageFallback) img.src = imageFallback
-          }}
-        />
+        <img src={image} alt="" width={400} height={280} loading="lazy" decoding="async" />
       </div>
       <div className="practice-card__badge">
         <DynamicIcon name={icon} size={18} />

@@ -7,6 +7,7 @@ export function BrotherhoodSection() {
     <section id="brotherhood" className="section section--brotherhood">
       <div className="container">
         <RevealOnScroll className="section-heading section-heading--center">
+          <p className="kicker kicker--center">Universal Brotherhood</p>
           <h2 className="section-heading__title">One Humanity. One Consciousness.</h2>
           <p className="section-heading__intro">
             The teachings encourage us to move beyond individual boundaries and develop a sense of
@@ -17,10 +18,10 @@ export function BrotherhoodSection() {
         <RevealOnScroll delay={0.08}>
           <div className="brotherhood-banner">
             <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80"
+              src="/images/ref/brotherhood.jpg"
               alt="Group meditating together in nature"
-              width={1200}
-              height={520}
+              width={1566}
+              height={480}
               loading="lazy"
               decoding="async"
             />

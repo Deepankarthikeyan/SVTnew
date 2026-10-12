@@ -18,7 +18,7 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <RevealOnScroll className={`section-heading section-heading--${align}`}>
-      {eyebrow && <p className="section-heading__eyebrow">{eyebrow}</p>}
+      {eyebrow && <p className="kicker kicker--center">{eyebrow}</p>}
       <h2 className="section-heading__title">{title}</h2>
       {subtitle && <p className="section-heading__subtitle">{subtitle}</p>}
       {intro && <div className="section-heading__intro">{intro}</div>}

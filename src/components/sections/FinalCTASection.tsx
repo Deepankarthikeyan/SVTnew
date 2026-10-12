@@ -10,10 +10,10 @@ export function FinalCTASection() {
     <section id="contact" className="section section--final-cta">
       <div className="final-cta__bg">
         <img
-          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80"
+          src="/images/ref/cta-sunset.jpg"
           alt=""
-          width={1800}
-          height={1000}
+          width={1743}
+          height={576}
           loading="lazy"
           decoding="async"
         />
@@ -22,9 +22,7 @@ export function FinalCTASection() {
       <div className="container final-cta__content">
         <RevealOnScroll>
           <h2 className="display-title display-title--light">Begin Your Inner Journey</h2>
-          <p>
-            You don&apos;t have to leave everyday life behind to discover inner peace.
-          </p>
+          <p>You don&apos;t have to leave everyday life behind to discover inner peace.</p>
           <div className="final-cta__pillars">
             {ctaPillars.map((pillar) => (
               <div key={pillar.label} className="final-cta__pillar">
@@ -36,7 +34,7 @@ export function FinalCTASection() {
             ))}
           </div>
           <button type="button" className="btn btn--primary btn--lg" onClick={openEnquire}>
-            Begin Your Journey
+            Begin Your Journey <span aria-hidden="true">→</span>
           </button>
           <p className="final-cta__closing">
             <strong>Spiritual Based Life Living</strong>

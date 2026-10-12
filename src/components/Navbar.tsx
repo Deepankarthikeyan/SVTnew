@@ -14,17 +14,15 @@ export function Navbar({ activeSection }: NavbarProps) {
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, 'change', (y) => {
-    setScrolled(y > 48)
+    setScrolled(y > 32)
   })
-
-  const navClass = scrolled ? 'nav nav--solid' : 'nav nav--transparent'
 
   return (
     <motion.header
-      className={navClass}
-      initial={{ y: -20, opacity: 0 }}
+      className={`nav${scrolled ? ' nav--scrolled' : ''}`}
+      initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5 }}
     >
       <div className="container nav__inner">
         <a className="nav__brand" href="#home">
@@ -60,7 +58,7 @@ export function Navbar({ activeSection }: NavbarProps) {
         </nav>
 
         <button type="button" className="btn btn--primary btn--sm nav__cta" onClick={openEnquire}>
-          Enquire Now
+          Enquire Now <span aria-hidden="true">→</span>
         </button>
       </div>
     </motion.header>
