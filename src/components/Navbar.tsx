@@ -28,7 +28,7 @@ export function Navbar({ activeSection, links = navLinks, transparentOnTop = fal
     >
       <div className="container nav__inner">
         <a className="nav__brand" href="#home">
-          <img src="/logo-emblem.svg" alt="" className="nav__emblem" width={40} height={40} />
+          <img src="/mockup/logo-crop.png" alt="" className="nav__emblem" width={44} height={44} />
           <span className="nav__brand-text">
             <strong>Vethathiri Maharishi</strong>
             <small>Spiritual Village</small>

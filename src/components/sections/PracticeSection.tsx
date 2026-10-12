@@ -16,9 +16,9 @@ export function PracticeSection() {
           intro="Our approach brings together simple yet meaningful practices that encourage a balanced and conscious way of living."
         />
         <StaggerReveal className="practice-grid">
-          {journeyPractices.map((item) => (
+          {journeyPractices.map((item, index) => (
             <StaggerItem key={item.title}>
-              <PracticeCard {...item} />
+              <PracticeCard {...item} index={index} />
             </StaggerItem>
           ))}
         </StaggerReveal>

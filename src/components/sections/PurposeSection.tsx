@@ -4,19 +4,19 @@ import { RevealOnScroll } from '../RevealOnScroll'
 
 export function PurposeSection() {
   return (
-    <section id="purpose" className="section section--purpose section--split-panel">
-      <div className="container purpose-layout">
-        <RevealOnScroll className="purpose-layout__media">
-          <img
-            src="/images/ref/purpose.jpg"
-            alt="Person meditating at sunrise"
-            width={783}
-            height={480}
-            loading="lazy"
-            decoding="async"
-          />
-        </RevealOnScroll>
-        <RevealOnScroll className="purpose-layout__copy" delay={0.1}>
+    <section id="purpose" className="section section--purpose section--split-panel purpose-half">
+      <div className="purpose-half__media">
+        <img
+          src="/images/ref/purpose.jpg"
+          alt="Person meditating at sunrise"
+          width={783}
+          height={480}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div className="purpose-half__copy">
+        <RevealOnScroll>
           <p className="kicker kicker--bar">The Purpose of the Journey</p>
           <h2 className="display-title display-title--green">Know Yourself. Understand Life.</h2>
           <ul className="purpose-points">

@@ -6,9 +6,12 @@ type PracticeCardProps = {
   title: string
   description: string
   image: string
+  index: number
 }
 
-export function PracticeCard({ icon, title, description, image }: PracticeCardProps) {
+export function PracticeCard({ icon, title, description, image, index }: PracticeCardProps) {
+  const badgeTone = index % 2 === 0 ? 'green' : 'copper'
+
   return (
     <motion.article
       className="practice-card"
@@ -18,7 +21,7 @@ export function PracticeCard({ icon, title, description, image }: PracticeCardPr
       <div className="practice-card__media">
         <img src={image} alt="" width={400} height={280} loading="lazy" decoding="async" />
       </div>
-      <div className="practice-card__badge">
+      <div className={`practice-card__badge practice-card__badge--${badgeTone}`}>
         <DynamicIcon name={icon} size={18} />
       </div>
       <div className="practice-card__body">

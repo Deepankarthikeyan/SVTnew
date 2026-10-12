@@ -47,35 +47,35 @@ export const journeyPractices = [
     title: 'Simplified Physical Exercises',
     description:
       'Improve physical health, flexibility and overall well-being through simple and practical exercises.',
-    image: '/images/ref/practice-1.jpg',
+    image: '/images/exact/practice-1.jpg',
   },
   {
     icon: 'flower2',
     title: 'Meditation',
     description:
       'Develop a calm and focused mind through regular meditation and inner observation.',
-    image: '/images/ref/practice-2.jpg',
+    image: '/images/exact/practice-2.jpg',
   },
   {
     icon: 'search',
     title: 'Introspection',
     description:
       'Understand your thoughts, emotions and actions through self-awareness and reflection.',
-    image: '/images/ref/practice-3.jpg',
+    image: '/images/exact/practice-3.jpg',
   },
   {
     icon: 'leaf',
     title: 'Kayakalpa',
     description:
       'A traditional practice focused on developing awareness of the body, mind and life force.',
-    image: '/images/ref/practice-4.jpg',
+    image: '/images/exact/practice-4.jpg',
   },
   {
     icon: 'bookOpen',
     title: 'Wisdom of Vethathiri Maharishi',
     description:
       'Explore profound teachings that help understand human life, relationships, nature and universal consciousness.',
-    image: '/images/ref/practice-5.jpg',
+    image: '/images/exact/practice-5.jpg',
   },
 ]
 
@@ -85,35 +85,35 @@ export const dimensions = [
     subtitle: 'Healthy physical living',
     gradient: 'linear-gradient(180deg, rgba(26, 92, 66, 0.94) 0%, rgba(45, 122, 88, 0.55) 48%, transparent 72%)',
     icon: 'body',
-    image: '/images/practice-exercise.jpg',
+    image: '/images/exact/dimension-1.jpg',
   },
   {
     key: 'MIND',
     subtitle: 'Clarity and emotional balance',
     gradient: 'linear-gradient(180deg, rgba(26, 74, 122, 0.94) 0%, rgba(61, 126, 200, 0.5) 48%, transparent 72%)',
     icon: 'mind',
-    image: '/images/ref/practice-3.jpg',
+    image: '/images/exact/dimension-2.jpg',
   },
   {
     key: 'LIFE FORCE',
     subtitle: 'Awareness of the energy within',
     gradient: 'linear-gradient(180deg, rgba(196, 95, 18, 0.92) 0%, rgba(240, 180, 41, 0.5) 48%, transparent 72%)',
     icon: 'force',
-    image: '/images/hq/hero-scene-alt.jpg',
+    image: '/images/exact/dimension-3.jpg',
   },
   {
     key: 'CONSCIOUSNESS',
     subtitle: 'Understanding oneself and life',
     gradient: 'linear-gradient(180deg, rgba(90, 45, 138, 0.92) 0%, rgba(139, 92, 246, 0.48) 48%, transparent 72%)',
     icon: 'consciousness',
-    image: '/images/practice-introspection.jpg',
+    image: '/images/exact/dimension-4.jpg',
   },
   {
     key: 'HARMONY',
     subtitle: 'Living peacefully with society and nature',
     gradient: 'linear-gradient(180deg, rgba(122, 69, 48, 0.9) 0%, rgba(199, 154, 82, 0.48) 48%, transparent 72%)',
     icon: 'harmony',
-    image: '/images/ref/village-1.jpg',
+    image: '/images/exact/dimension-5.jpg',
   },
 ]
 
@@ -175,9 +175,8 @@ export const discoveries = [
 export const ctaPillars = [
   { label: 'Live consciously.', icon: 'sun' },
   { label: 'Live compassionately.', icon: 'heart' },
-  { label: 'Live harmoniously.', icon: 'leaf' },
-  { label: 'Live with awareness.', icon: 'eye' },
-  { label: 'Live responsibly.', icon: 'handHeart' },
+  { label: 'Live harmoniously.', icon: 'users' },
+  { label: 'Live with awareness.', icon: 'flower2' },
 ]
 
 export const purposeItems = [
@@ -204,33 +203,33 @@ export const purposeItems = [
 ]
 
 export const brotherhoodValues = [
-  { label: 'Love', icon: 'heart' },
-  { label: 'Compassion', icon: 'handHeart' },
-  { label: 'Understanding', icon: 'messageCircle' },
-  { label: 'Harmony', icon: 'leaf' },
-  { label: 'Responsibility', icon: 'shield' },
+  { label: 'Love', icon: 'heart', color: '#c73e1d' },
+  { label: 'Compassion', icon: 'leaf', color: '#2d7a58' },
+  { label: 'Understanding', icon: 'messageCircle', color: '#e97816' },
+  { label: 'Harmony', icon: 'users', color: '#c79a52' },
+  { label: 'Responsibility', icon: 'shield', color: '#173f35' },
 ]
 
 export const villageTiles = [
   {
     title: 'Nature',
     text: 'Connect with the natural environment.',
-    image: '/images/ref/village-1.jpg',
+    image: '/images/exact/village-1.jpg',
   },
   {
     title: 'Meditation',
     text: 'Create space for inner silence.',
-    image: '/images/ref/village-2.jpg',
+    image: '/images/exact/village-2.jpg',
   },
   {
     title: 'Yoga',
     text: 'Support physical and mental well-being.',
-    image: '/images/ref/village-1.jpg',
+    image: '/images/exact/village-3.jpg',
   },
   {
     title: 'Community',
     text: 'Grow together through shared values.',
-    image: '/images/ref/village-2.jpg',
+    image: '/images/exact/village-4.jpg',
   },
 ]
 

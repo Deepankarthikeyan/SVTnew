@@ -10,10 +10,10 @@ export function FinalCTASection() {
     <section id="contact" className="section section--final-cta">
       <div className="final-cta__bg">
         <img
-          src="/images/ref/cta-sunset.jpg"
+          src="/images/exact/cta-hero.jpg"
           alt=""
-          width={1743}
-          height={576}
+          width={1920}
+          height={469}
           loading="lazy"
           decoding="async"
         />
@@ -21,7 +21,6 @@ export function FinalCTASection() {
       </div>
       <div className="container final-cta__content">
         <RevealOnScroll>
-          <p className="kicker kicker--center kicker--light">A Simple Message</p>
           <h2 className="display-title display-title--light">Begin Your Inner Journey</h2>
           <p className="final-cta__lead">
             You don&apos;t have to leave everyday life behind to discover inner peace.

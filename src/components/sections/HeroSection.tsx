@@ -39,7 +39,7 @@ export function HeroSection() {
             <a className="btn btn--primary btn--lg" href="#journey">
               Explore Spiritual Living <span aria-hidden="true">→</span>
             </a>
-            <button type="button" className="btn btn--outline btn--lg" onClick={openEnquire}>
+            <button type="button" className="btn btn--outline-orange btn--lg" onClick={openEnquire}>
               Enquire Now
             </button>
           </div>
@@ -48,7 +48,7 @@ export function HeroSection() {
 
       <div className="hero__ribbon">
         <div className="container hero__tagline">
-          <img src="/logo-emblem.svg" alt="" width={28} height={28} className="hero__tagline-logo" />
+          <img src="/mockup/logo-crop.png" alt="" width={26} height={26} className="hero__tagline-logo" />
           <span>Know Yourself</span>
           <span className="hero__tagline-dot" aria-hidden="true">·</span>
           <span>Understand Life</span>

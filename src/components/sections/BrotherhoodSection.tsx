@@ -28,8 +28,8 @@ export function BrotherhoodSection() {
           <div className="brotherhood-values">
             {brotherhoodValues.map((value) => (
               <div key={value.label} className="brotherhood-values__item">
-                <span className="brotherhood-values__icon">
-                  <DynamicIcon name={value.icon} size={20} />
+                <span className="brotherhood-values__icon" style={{ color: value.color }}>
+                  <DynamicIcon name={value.icon} size={22} />
                 </span>
                 <span>{value.label}</span>
               </div>

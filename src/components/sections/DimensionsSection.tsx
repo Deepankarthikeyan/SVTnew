@@ -10,7 +10,7 @@ export function DimensionsSection() {
       <BotanicalDecor position="top-left" />
       <BotanicalDecor position="top-right" />
       <div className="container">
-        <SectionHeading eyebrow="Five Dimensions" title="Five Dimensions of Conscious Living" />
+        <SectionHeading eyebrow="Five Dimensions" title="Five Dimensions of Conscious Living" align="center" />
       </div>
       <StaggerReveal className="dimensions-row">
         {dimensions.map((dim) => (

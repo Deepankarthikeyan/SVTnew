@@ -2,11 +2,11 @@ import { motion } from 'framer-motion'
 import { DynamicIcon } from '../icons/IconMap'
 
 const dimensionIconMap: Record<string, string> = {
-  body: 'activity',
+  body: 'user',
   mind: 'brain',
   force: 'sun',
-  consciousness: 'eye',
-  harmony: 'leaf',
+  consciousness: 'flower2',
+  harmony: 'users',
 }
 
 type DimensionCardProps = {
