@@ -4,7 +4,7 @@ import { RevealOnScroll } from '../RevealOnScroll'
 
 export function PurposeSection() {
   return (
-    <section id="purpose" className="section section--purpose">
+    <section id="purpose" className="section section--purpose section--split-panel">
       <div className="container purpose-layout">
         <RevealOnScroll className="purpose-layout__media">
           <img
@@ -17,9 +17,8 @@ export function PurposeSection() {
           />
         </RevealOnScroll>
         <RevealOnScroll className="purpose-layout__copy" delay={0.1}>
-          <p className="kicker">The Purpose of the Journey</p>
+          <p className="kicker kicker--bar">The Purpose of the Journey</p>
           <h2 className="display-title display-title--green">Know Yourself. Understand Life.</h2>
-          <p>The ultimate purpose of this spiritual journey is to:</p>
           <ul className="purpose-points">
             {purposeItems.map((item) => (
               <li key={item.title}>

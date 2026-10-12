@@ -21,8 +21,11 @@ export function FinalCTASection() {
       </div>
       <div className="container final-cta__content">
         <RevealOnScroll>
+          <p className="kicker kicker--center kicker--light">A Simple Message</p>
           <h2 className="display-title display-title--light">Begin Your Inner Journey</h2>
-          <p>You don&apos;t have to leave everyday life behind to discover inner peace.</p>
+          <p className="final-cta__lead">
+            You don&apos;t have to leave everyday life behind to discover inner peace.
+          </p>
           <div className="final-cta__pillars">
             {ctaPillars.map((pillar) => (
               <div key={pillar.label} className="final-cta__pillar">

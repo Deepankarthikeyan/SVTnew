@@ -14,19 +14,22 @@ export const sectionIds = [
   'contact',
 ] as const
 
-/** Five-section landing (coded React — no merged PNG slices). */
-export const landingSectionIds = ['home', 'about', 'journey', 'dimensions', 'lifestyle'] as const
+/** Full landing — first five + remaining five section blocks. */
+export const landingSectionIds = [
+  'home',
+  'about',
+  'journey',
+  'dimensions',
+  'lifestyle',
+  'peace',
+  'purpose',
+  'brotherhood',
+  'village',
+  'balance',
+  'contact',
+] as const
 
-export const landingNavLinks = [
-  { label: 'Home', href: '#home', sectionId: 'home' },
-  { label: 'About', href: '#about', sectionId: 'about' },
-  { label: 'Practices', href: '#journey', sectionId: 'journey' },
-  { label: 'Dimensions', href: '#dimensions', sectionId: 'dimensions' },
-  { label: 'Life at Village', href: '#lifestyle', sectionId: 'lifestyle' },
-  { label: 'Contact', href: '#lifestyle', sectionId: 'lifestyle' },
-]
-
-export const navLinks = [
+export const navLinks: NavLink[] = [
   { label: 'Home', href: '#home', sectionId: 'home' },
   { label: 'About', href: '#about', sectionId: 'about' },
   { label: 'Practices', href: '#journey', sectionId: 'journey' },
@@ -35,6 +38,8 @@ export const navLinks = [
   { label: 'Purpose', href: '#purpose', sectionId: 'purpose' },
   { label: 'Contact', href: '#contact', sectionId: 'contact' },
 ]
+
+export const landingNavLinks = navLinks
 
 export const journeyPractices = [
   {
@@ -123,12 +128,48 @@ export const wayOfLife = [
 ]
 
 export const discoveries = [
-  { num: '01', title: 'Mental Clarity', text: 'A calmer and more focused mind.', icon: 'brain' },
-  { num: '02', title: 'Emotional Balance', text: 'Greater understanding and control of emotions.', icon: 'scale' },
-  { num: '03', title: 'Self-Awareness', text: 'A deeper understanding of oneself.', icon: 'eye' },
-  { num: '04', title: 'Inner Peace', text: 'A peaceful state beyond everyday distractions.', icon: 'feather' },
-  { num: '05', title: 'Harmony', text: 'A balanced relationship with people, society and nature.', icon: 'leaf' },
-  { num: '06', title: 'Wisdom', text: 'A deeper understanding of life and its purpose.', icon: 'bookOpen' },
+  {
+    num: '01',
+    title: 'Mental Clarity',
+    text: 'A calmer and more focused mind.',
+    icon: 'brain',
+    accent: '#173f35',
+  },
+  {
+    num: '02',
+    title: 'Emotional Balance',
+    text: 'Greater understanding and control of emotions.',
+    icon: 'heart',
+    accent: '#c45f12',
+  },
+  {
+    num: '03',
+    title: 'Self-Awareness',
+    text: 'A deeper understanding of oneself.',
+    icon: 'user',
+    accent: '#1a5c42',
+  },
+  {
+    num: '04',
+    title: 'Inner Peace',
+    text: 'A peaceful state beyond everyday distractions.',
+    icon: 'flower2',
+    accent: '#6b3fa0',
+  },
+  {
+    num: '05',
+    title: 'Harmony',
+    text: 'A balanced relationship with people, society and nature.',
+    icon: 'leaf',
+    accent: '#2d7a58',
+  },
+  {
+    num: '06',
+    title: 'Wisdom',
+    text: 'A deeper understanding of life and its purpose.',
+    icon: 'sun',
+    accent: '#e97816',
+  },
 ]
 
 export const ctaPillars = [
@@ -197,18 +238,21 @@ export const comparison = [
   {
     title: 'Physical',
     color: '#173F35',
+    wash: 'linear-gradient(180deg, #e8f3ec 0%, #f7fbf8 100%)',
     image: '/images/ref/balance-1.jpg',
     items: ['Healthy body', 'Exercise', 'Vitality', 'Discipline'],
   },
   {
     title: 'Mental',
     color: '#1d4f8c',
+    wash: 'linear-gradient(180deg, #e6eef8 0%, #f5f8fc 100%)',
     image: '/images/ref/balance-2.jpg',
     items: ['Clear mind', 'Meditation', 'Emotional balance', 'Focus'],
   },
   {
     title: 'Spiritual',
-    color: '#E97816',
+    color: '#8b5e34',
+    wash: 'linear-gradient(180deg, #f6ebe0 0%, #fdf8f2 100%)',
     image: '/images/ref/balance-3.jpg',
     items: ['Inner awareness', 'Introspection', 'Self-realisation', 'Inner peace'],
   },

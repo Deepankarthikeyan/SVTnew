@@ -1,6 +1,5 @@
 import { villageTiles } from '../../data/content'
 import { useEnquire } from '../../context/EnquireContext'
-import { SectionHeading } from '../SectionHeading'
 import { RevealOnScroll, StaggerItem, StaggerReveal } from '../RevealOnScroll'
 
 export function VillageSection() {
@@ -8,8 +7,20 @@ export function VillageSection() {
 
   return (
     <section id="village" className="section section--village">
-      <div className="container">
-        <SectionHeading title="A Peaceful Environment for Conscious Living" />
+      <div className="container village-split">
+        <RevealOnScroll className="village-split__copy">
+          <p className="kicker kicker--bar">Life at the Spiritual Village</p>
+          <h2 className="display-title display-title--green">
+            A Peaceful Environment for Conscious Living
+          </h2>
+          <p>
+            Surrounded by nature, the Village provides an atmosphere where people can slow down,
+            reflect, practise and reconnect with themselves.
+          </p>
+          <button type="button" className="btn btn--primary" onClick={openEnquire}>
+            Explore the Village <span aria-hidden="true">→</span>
+          </button>
+        </RevealOnScroll>
         <StaggerReveal className="village-grid">
           {villageTiles.map((tile) => (
             <StaggerItem key={tile.title}>
@@ -25,11 +36,6 @@ export function VillageSection() {
             </StaggerItem>
           ))}
         </StaggerReveal>
-        <RevealOnScroll className="village-cta">
-          <button type="button" className="btn btn--primary" onClick={openEnquire}>
-            Explore the Village
-          </button>
-        </RevealOnScroll>
       </div>
     </section>
   )
