@@ -8,19 +8,19 @@ export function Navbar() {
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, 'change', (y) => {
-    setScrolled(y > 48)
+    setScrolled(y > 24)
   })
 
   return (
     <motion.header
-      className={`nav${scrolled ? ' nav--scrolled' : ''}`}
-      initial={{ y: -24, opacity: 0 }}
+      className={`nav${scrolled ? ' nav--scrolled' : ' nav--hero'}`}
+      initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="nav__inner container">
+      <div className="nav__inner container nav__inner--mockup">
         <a className="nav__brand" href="#home">
-          <span className="nav__logo" aria-hidden="true">ॐ</span>
+          <img src="/logo-emblem.svg" alt="" className="nav__emblem" width={42} height={42} />
           <span className="nav__brand-text">
             <strong>Vethathiri Maharishi</strong>
             <small>Spiritual Village</small>
@@ -38,16 +38,20 @@ export function Navbar() {
           <span />
         </button>
 
-        <nav className={`nav__links${open ? ' nav__links--open' : ''}`} aria-label="Primary">
+        <nav
+          className={`nav__center${open ? ' nav__center--open' : ''}`}
+          aria-label="Primary"
+        >
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
               {link.label}
             </a>
           ))}
-          <a className="btn btn--primary btn--sm" href="#contact" onClick={() => setOpen(false)}>
-            Enquire Now
-          </a>
         </nav>
+
+        <a className="btn btn--primary btn--sm nav__cta" href="#contact" onClick={() => setOpen(false)}>
+          Enquire Now
+        </a>
       </div>
     </motion.header>
   )

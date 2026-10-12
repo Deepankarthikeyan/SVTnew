@@ -95,12 +95,19 @@ export const wayOfLife = [
 ]
 
 export const discoveries = [
-  { num: '01', title: 'Mental Clarity', text: 'A calmer and more focused mind.' },
-  { num: '02', title: 'Emotional Balance', text: 'Greater understanding and control of emotions.' },
-  { num: '03', title: 'Self-Awareness', text: 'A deeper understanding of oneself.' },
-  { num: '04', title: 'Inner Peace', text: 'A peaceful state beyond everyday distractions.' },
-  { num: '05', title: 'Harmony', text: 'A balanced relationship with people, society and nature.' },
-  { num: '06', title: 'Wisdom', text: 'A deeper understanding of life and its purpose.' },
+  { num: '01', title: 'Mental Clarity', text: 'A calmer and more focused mind.', icon: 'clarity' },
+  { num: '02', title: 'Emotional Balance', text: 'Greater understanding and control of emotions.', icon: 'balance' },
+  { num: '03', title: 'Self-Awareness', text: 'A deeper understanding of oneself.', icon: 'awareness' },
+  { num: '04', title: 'Inner Peace', text: 'A peaceful state beyond everyday distractions.', icon: 'peace' },
+  { num: '05', title: 'Harmony', text: 'A balanced relationship with people, society and nature.', icon: 'harmony' },
+  { num: '06', title: 'Wisdom', text: 'A deeper understanding of life and its purpose.', icon: 'wisdom' },
+]
+
+export const ctaPillars = [
+  { label: 'Live consciously.', icon: 'conscious' },
+  { label: 'Live compassionately.', icon: 'compassion' },
+  { label: 'Live harmoniously.', icon: 'harmony' },
+  { label: 'Live with awareness.', icon: 'awareness' },
 ]
 
 export const purposeItems = [
