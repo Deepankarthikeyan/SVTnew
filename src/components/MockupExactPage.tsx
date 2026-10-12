@@ -1,19 +1,24 @@
 import { useEnquire } from '../context/EnquireContext'
 
-const SLICES = [
-  { id: 'home', src: '/mockup/slice-00-hero.jpg', alt: 'Hero — Spiritual Based Life Living' },
-  { id: 'about', src: '/mockup/slice-01-about.jpg', alt: 'About — Live Better. Think Deeper. Know Yourself.' },
-  { id: 'journey', src: '/mockup/slice-02-journey.jpg', alt: 'The Journey Within — practices' },
-  { id: 'dimensions', src: '/mockup/slice-03-dimensions.jpg', alt: 'Five Dimensions of Conscious Living' },
-  { id: 'lifestyle', src: '/mockup/slice-04-lifestyle.jpg', alt: 'More Than a Practice. A Way of Life.' },
-  { id: 'peace', src: '/mockup/slice-05-peace.jpg', alt: 'A Journey Towards Inner Peace' },
-  { id: 'purpose', src: '/mockup/slice-06-purpose.jpg', alt: 'Purpose and Universal Brotherhood' },
-  { id: 'village', src: '/mockup/slice-07-village.jpg', alt: 'Life at the Spiritual Village' },
-  { id: 'balance', src: '/mockup/slice-08-balance.jpg', alt: 'Bring Balance Into Everyday Life' },
-  { id: 'contact', src: '/mockup/slice-09-cta.jpg', alt: 'Begin Your Inner Journey' },
+/** Native dimensions of public/mockup/reference-full.jpg */
+const MOCKUP_WIDTH = 581
+const MOCKUP_HEIGHT = 1600
+
+/** Scroll targets aligned to the full-page reference artwork */
+const SECTION_ANCHORS = [
+  { id: 'home', top: 0 },
+  { id: 'about', top: 18.9 },
+  { id: 'journey', top: 26.8 },
+  { id: 'dimensions', top: 34.1 },
+  { id: 'lifestyle', top: 41.6 },
+  { id: 'peace', top: 47.1 },
+  { id: 'purpose', top: 53.4 },
+  { id: 'brotherhood', top: 53.4 },
+  { id: 'village', top: 62.8 },
+  { id: 'balance', top: 70.9 },
+  { id: 'contact', top: 77.8 },
 ]
 
-/** Invisible hit areas (% of full 581×1600 mockup) for key CTAs only */
 type Hotspot =
   | {
       label: string
@@ -43,27 +48,42 @@ const HOTSPOTS: Hotspot[] = [
 export function MockupExactPage() {
   const { openEnquire } = useEnquire()
 
+  function scrollToSection(hash: string) {
+    const el = document.querySelector(hash)
+    el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <div className="exact-mockup">
       <a className="skip-link" href="#about">Skip to content</a>
 
       <div className="exact-mockup__frame">
-        <div className="exact-mockup__stack" aria-label="Vethathiri Maharishi Spiritual Village">
-          {SLICES.map((slice, index) => (
-            <img
-              key={slice.id}
-              id={slice.id}
-              className="exact-mockup__slice"
-              src={slice.src}
-              alt={slice.alt}
-              width={581}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              fetchPriority={index === 0 ? 'high' : undefined}
+        <div
+          className="exact-mockup__canvas"
+          style={{ aspectRatio: `${MOCKUP_WIDTH} / ${MOCKUP_HEIGHT}` }}
+        >
+          <img
+            id="home"
+            className="exact-mockup__full"
+            src="/mockup/reference-full.jpg"
+            alt="Vethathiri Maharishi Spiritual Village — Spiritual Based Life Living (full design)"
+            width={MOCKUP_WIDTH}
+            height={MOCKUP_HEIGHT}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
+
+          {SECTION_ANCHORS.map((anchor) => (
+            <span
+              key={anchor.id}
+              id={anchor.id}
+              className="exact-mockup__anchor"
+              style={{ top: `${anchor.top}%` }}
             />
           ))}
 
-          <div className="exact-mockup__hotspots" aria-hidden={false}>
+          <div className="exact-mockup__hotspots">
             {HOTSPOTS.map((spot) => (
               <button
                 key={spot.label}
@@ -78,9 +98,7 @@ export function MockupExactPage() {
                 aria-label={spot.label}
                 onClick={() => {
                   if ('action' in spot && spot.action === 'enquire') openEnquire()
-                  else if ('href' in spot) {
-                    document.querySelector(spot.href)?.scrollIntoView({ behavior: 'smooth' })
-                  }
+                  else if ('href' in spot) scrollToSection(spot.href)
                 }}
               />
             ))}
@@ -89,7 +107,7 @@ export function MockupExactPage() {
       </div>
 
       <nav className="exact-mockup__nav-fallback" aria-label="Section navigation">
-        {SLICES.map((s) => (
+        {SECTION_ANCHORS.map((s) => (
           <a key={s.id} href={`#${s.id}`}>{s.id}</a>
         ))}
       </nav>
